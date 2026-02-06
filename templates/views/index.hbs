@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="icon" href="/img/cloud.png">
+    <link rel="stylesheet" href="./css/styles.css">
+
+
+</head>
+
+<body>
+
+    <div class="main-content">
+        {{>header}}
+        <p>Use this site to get your weather!</p>
+        <form>
+            <input placeholder="Location">
+            <button >Search</button>
+        </form>
+
+        <p id="message-1"></p>
+        <p id="message-2"></p>
+    </div>
+       
+    {{>footer}}
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
+
+
+<!--
+ Notes:
+ - Static assets served from `public` are unchanged on refresh; they suit simple, non-dynamic pages.
+- Dynamic pages need a **template engine**, so Express can render content at runtime.
+- **Handlebars** enables dynamic HTML and reusable components (headers, footers, etc.).
+- Install **hbs** (Express-friendly wrapper around Handlebars) and set it via `app.set('view engine', 'hbs')`.
+- Templates live in a root-level **views** folder with `.hbs` extension.
+- Use `res.render(viewName, dataObject)` to render templates instead of `res.send`.
+- Dynamic values are injected in templates using `{{variableName}}`.
+- Pages like index, about, and help are converted from static HTML to dynamic Handlebars templates.
+
+
+ -->

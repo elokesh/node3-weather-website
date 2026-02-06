@@ -1,0 +1,28 @@
+<header>
+    <h1>{{title}}</h1>
+    
+    <a href="/">Weather</a>
+    <a href="/about">About</a>
+    <a href="/help">Help</a>
+</header>
+
+
+{{!--
+    Notes:
+     - Handlebars **partials** are reusable pieces of templates used inside larger pages.
+- They are ideal for shared UI sections like headers, footers, and navigation bars.
+- Partials prevent duplication and keep the site layout consistent across pages.
+- Create a `templates/partials` directory separate from `templates/views`.
+- Load Handlebars using `const hbs = require('hbs')`.
+- Register partials with `hbs.registerPartials(partialsPath)`.
+- Partials use the `.hbs` extension, same as normal Handlebars views.
+- A partial contains only a fragment of HTML, not a full document structure.
+- Include a partial in a view using `{{> partialName}}`.
+- Nodemon must watch `.hbs` files using `nodemon -e js,hbs`.
+- Changes to partials require a server restart to take effect.
+- Dynamic values passed via `res.render()` are accessible inside partials.
+- A header partial can render the page `title` dynamically on all pages.
+- Navigation links placed in the header appear consistently site-wide.
+- A footer partial can display shared info like “Created by {{name}}”.
+
+--}}
