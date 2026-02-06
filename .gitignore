@@ -1,1 +1,27 @@
 node_modules/
+
+
+
+
+
+
+
+
+# ## Git Initialization & First Commits – Summary
+#
+# - Git must be initialized **explicitly** in the root project folder (`web-server`) using `git init`, not in parent or nested directories.
+# - Running `git init` creates a hidden `.git` folder, which stores all Git-related data and is fully managed by Git.
+# - A **Git repository** is simply a place where Git stores version control data; initially, this is a **local repository**.
+# - VS Code highlights untracked files in **green** after Git is initialized, indicating they haven’t been committed yet.
+# - The `.git` folder is hidden by default in VS Code because it should not be manually edited.
+# - `git status` shows the current state of the repository, including untracked files, staged files, and modified files.
+# - The `node_modules` folder should not be tracked since it’s generated and can be recreated using `npm install`.
+# - To ignore files or folders, create a `.gitignore` file in the project root and list entries like `node_modules/`.
+# - `git add` moves files into the **staging area**, preparing them for a commit.
+# - `git add .` is a shortcut to stage all changes at once.
+# - `git commit -m "message"` creates a snapshot of staged changes; the first commit is usually called **“init commit”**.
+# - After committing, files return to their normal color, indicating they are now tracked.
+# - Any later changes to tracked files appear in **orange**, showing they are modified but not yet staged.
+# - Re-running `git status` helps verify staged vs unstaged changes before committing.
+# - Multiple commits allow Git to track project history incrementally.
+# - With Git initialized and commits created, the project is ready for integration with platforms like GitHub and Heroku.
