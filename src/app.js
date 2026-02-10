@@ -8,6 +8,7 @@ const hbs = require('hbs');
 
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 //Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, '../public')
@@ -93,7 +94,7 @@ app.use((req, res) => {
      res.render("404", { errorMsg: "My 404 page", name: "Lokesh", title: "404" });
 })
 
-app.listen(3000, () => {
+app.listen(port, () => {
      console.log('Server is listening');
 })
 
